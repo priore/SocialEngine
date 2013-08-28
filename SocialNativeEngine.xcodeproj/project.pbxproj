@@ -1,0 +1,359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FACEF0217CE57A500722654 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF0117CE57A500722654 /* UIKit.framework */; };
+		9FACEF0417CE57A500722654 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF0317CE57A500722654 /* Foundation.framework */; };
+		9FACEF0617CE57A500722654 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF0517CE57A500722654 /* CoreGraphics.framework */; };
+		9FACEF0C17CE57A500722654 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF0A17CE57A500722654 /* InfoPlist.strings */; };
+		9FACEF0E17CE57A500722654 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FACEF0D17CE57A500722654 /* main.m */; };
+		9FACEF1217CE57A500722654 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FACEF1117CE57A500722654 /* AppDelegate.m */; };
+		9FACEF1417CE57A500722654 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF1317CE57A500722654 /* Default.png */; };
+		9FACEF1617CE57A500722654 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF1517CE57A500722654 /* Default@2x.png */; };
+		9FACEF1817CE57A500722654 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF1717CE57A500722654 /* Default-568h@2x.png */; };
+		9FACEF1B17CE57A500722654 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FACEF1A17CE57A500722654 /* ViewController.m */; };
+		9FACEF1E17CE57A500722654 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF1C17CE57A500722654 /* ViewController.xib */; };
+		9FACEF2C17CE57EF00722654 /* FacebookEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FACEF2917CE57EF00722654 /* FacebookEngine.m */; };
+		9FACEF2D17CE57EF00722654 /* TwitterEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FACEF2B17CE57EF00722654 /* TwitterEngine.m */; };
+		9FACEF3217CE5B0700722654 /* egyptoname.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF3117CE5B0700722654 /* egyptoname.jpg */; };
+		9FACEF3417CE5BE300722654 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF3317CE5BE300722654 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9FACEF3617CE5BE700722654 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF3517CE5BE700722654 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9FACEF3817CE5BEB00722654 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF3717CE5BEB00722654 /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9FACEF3A17CE5ED200722654 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF3917CE5ED200722654 /* Default.png */; };
+		9FACEF3C17CE5EE600722654 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF3B17CE5EE600722654 /* Default@2x.png */; };
+		9FACEF3E17CE5F0100722654 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF3D17CE5F0100722654 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9FACEEFE17CE57A500722654 /* SocialNativeEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNativeEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FACEF0117CE57A500722654 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9FACEF0317CE57A500722654 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9FACEF0517CE57A500722654 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9FACEF0917CE57A500722654 /* SocialNativeEngine-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SocialNativeEngine-Info.plist"; sourceTree = "<group>"; };
+		9FACEF0B17CE57A500722654 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9FACEF0D17CE57A500722654 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9FACEF0F17CE57A500722654 /* SocialNativeEngine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SocialNativeEngine-Prefix.pch"; sourceTree = "<group>"; };
+		9FACEF1017CE57A500722654 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9FACEF1117CE57A500722654 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9FACEF1317CE57A500722654 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9FACEF1517CE57A500722654 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9FACEF1717CE57A500722654 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9FACEF1917CE57A500722654 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9FACEF1A17CE57A500722654 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9FACEF1D17CE57A500722654 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		9FACEF2817CE57EF00722654 /* FacebookEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookEngine.h; sourceTree = "<group>"; };
+		9FACEF2917CE57EF00722654 /* FacebookEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookEngine.m; sourceTree = "<group>"; };
+		9FACEF2A17CE57EF00722654 /* TwitterEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterEngine.h; sourceTree = "<group>"; };
+		9FACEF2B17CE57EF00722654 /* TwitterEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterEngine.m; sourceTree = "<group>"; };
+		9FACEF2E17CE586500722654 /* SocialEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialEngine.h; sourceTree = "<group>"; };
+		9FACEF3117CE5B0700722654 /* egyptoname.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = egyptoname.jpg; sourceTree = "<group>"; };
+		9FACEF3317CE5BE300722654 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		9FACEF3517CE5BE700722654 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9FACEF3717CE5BEB00722654 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		9FACEF3917CE5ED200722654 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = SocialNativeEngine/Default.png; sourceTree = "<group>"; };
+		9FACEF3B17CE5EE600722654 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "SocialNativeEngine/Default@2x.png"; sourceTree = "<group>"; };
+		9FACEF3D17CE5F0100722654 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "SocialNativeEngine/Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FACEEFB17CE57A500722654 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FACEF3817CE5BEB00722654 /* Twitter.framework in Frameworks */,
+				9FACEF3617CE5BE700722654 /* Social.framework in Frameworks */,
+				9FACEF3417CE5BE300722654 /* Accounts.framework in Frameworks */,
+				9FACEF0217CE57A500722654 /* UIKit.framework in Frameworks */,
+				9FACEF0417CE57A500722654 /* Foundation.framework in Frameworks */,
+				9FACEF0617CE57A500722654 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FACEEF517CE57A500722654 = {
+			isa = PBXGroup;
+			children = (
+				9FACEF3917CE5ED200722654 /* Default.png */,
+				9FACEF3B17CE5EE600722654 /* Default@2x.png */,
+				9FACEF3D17CE5F0100722654 /* Default-568h@2x.png */,
+				9FACEF3717CE5BEB00722654 /* Twitter.framework */,
+				9FACEF3517CE5BE700722654 /* Social.framework */,
+				9FACEF3317CE5BE300722654 /* Accounts.framework */,
+				9FACEF0717CE57A500722654 /* SocialNativeEngine */,
+				9FACEF0017CE57A500722654 /* Frameworks */,
+				9FACEEFF17CE57A500722654 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FACEEFF17CE57A500722654 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FACEEFE17CE57A500722654 /* SocialNativeEngine.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FACEF0017CE57A500722654 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FACEF0117CE57A500722654 /* UIKit.framework */,
+				9FACEF0317CE57A500722654 /* Foundation.framework */,
+				9FACEF0517CE57A500722654 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FACEF0717CE57A500722654 /* SocialNativeEngine */ = {
+			isa = PBXGroup;
+			children = (
+				9FACEF1017CE57A500722654 /* AppDelegate.h */,
+				9FACEF1117CE57A500722654 /* AppDelegate.m */,
+				9FACEF1917CE57A500722654 /* ViewController.h */,
+				9FACEF1A17CE57A500722654 /* ViewController.m */,
+				9FACEF1C17CE57A500722654 /* ViewController.xib */,
+				9FACEF3117CE5B0700722654 /* egyptoname.jpg */,
+				9FACEF2717CE57EF00722654 /* ClassEngine */,
+				9FACEF0817CE57A500722654 /* Supporting Files */,
+			);
+			path = SocialNativeEngine;
+			sourceTree = "<group>";
+		};
+		9FACEF0817CE57A500722654 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9FACEF0917CE57A500722654 /* SocialNativeEngine-Info.plist */,
+				9FACEF0A17CE57A500722654 /* InfoPlist.strings */,
+				9FACEF0D17CE57A500722654 /* main.m */,
+				9FACEF0F17CE57A500722654 /* SocialNativeEngine-Prefix.pch */,
+				9FACEF1317CE57A500722654 /* Default.png */,
+				9FACEF1517CE57A500722654 /* Default@2x.png */,
+				9FACEF1717CE57A500722654 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9FACEF2717CE57EF00722654 /* ClassEngine */ = {
+			isa = PBXGroup;
+			children = (
+				9FACEF2E17CE586500722654 /* SocialEngine.h */,
+				9FACEF2817CE57EF00722654 /* FacebookEngine.h */,
+				9FACEF2917CE57EF00722654 /* FacebookEngine.m */,
+				9FACEF2A17CE57EF00722654 /* TwitterEngine.h */,
+				9FACEF2B17CE57EF00722654 /* TwitterEngine.m */,
+			);
+			path = ClassEngine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FACEEFD17CE57A500722654 /* SocialNativeEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FACEF2417CE57A500722654 /* Build configuration list for PBXNativeTarget "SocialNativeEngine" */;
+			buildPhases = (
+				9FACEEFA17CE57A500722654 /* Sources */,
+				9FACEEFB17CE57A500722654 /* Frameworks */,
+				9FACEEFC17CE57A500722654 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SocialNativeEngine;
+			productName = SocialNativeEngine;
+			productReference = 9FACEEFE17CE57A500722654 /* SocialNativeEngine.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FACEEF617CE57A500722654 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Danilo Priore";
+			};
+			buildConfigurationList = 9FACEEF917CE57A500722654 /* Build configuration list for PBXProject "SocialNativeEngine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9FACEEF517CE57A500722654;
+			productRefGroup = 9FACEEFF17CE57A500722654 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FACEEFD17CE57A500722654 /* SocialNativeEngine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FACEEFC17CE57A500722654 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FACEF0C17CE57A500722654 /* InfoPlist.strings in Resources */,
+				9FACEF1417CE57A500722654 /* Default.png in Resources */,
+				9FACEF1617CE57A500722654 /* Default@2x.png in Resources */,
+				9FACEF1817CE57A500722654 /* Default-568h@2x.png in Resources */,
+				9FACEF1E17CE57A500722654 /* ViewController.xib in Resources */,
+				9FACEF3217CE5B0700722654 /* egyptoname.jpg in Resources */,
+				9FACEF3A17CE5ED200722654 /* Default.png in Resources */,
+				9FACEF3C17CE5EE600722654 /* Default@2x.png in Resources */,
+				9FACEF3E17CE5F0100722654 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FACEEFA17CE57A500722654 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FACEF0E17CE57A500722654 /* main.m in Sources */,
+				9FACEF1217CE57A500722654 /* AppDelegate.m in Sources */,
+				9FACEF1B17CE57A500722654 /* ViewController.m in Sources */,
+				9FACEF2C17CE57EF00722654 /* FacebookEngine.m in Sources */,
+				9FACEF2D17CE57EF00722654 /* TwitterEngine.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9FACEF0A17CE57A500722654 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FACEF0B17CE57A500722654 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9FACEF1C17CE57A500722654 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FACEF1D17CE57A500722654 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FACEF2217CE57A500722654 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FACEF2317CE57A500722654 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FACEF2517CE57A500722654 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocialNativeEngine/SocialNativeEngine-Prefix.pch";
+				INFOPLIST_FILE = "SocialNativeEngine/SocialNativeEngine-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9FACEF2617CE57A500722654 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SocialNativeEngine/SocialNativeEngine-Prefix.pch";
+				INFOPLIST_FILE = "SocialNativeEngine/SocialNativeEngine-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FACEEF917CE57A500722654 /* Build configuration list for PBXProject "SocialNativeEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FACEF2217CE57A500722654 /* Debug */,
+				9FACEF2317CE57A500722654 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FACEF2417CE57A500722654 /* Build configuration list for PBXNativeTarget "SocialNativeEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FACEF2517CE57A500722654 /* Debug */,
+				9FACEF2617CE57A500722654 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FACEEF617CE57A500722654 /* Project object */;
+}
