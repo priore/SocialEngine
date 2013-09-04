@@ -29,11 +29,15 @@
 
 @interface TwitterEngine : NSObject
 
+#pragma mark - Share
+
 + (void)shareURI:(NSString*)uri
             text:(NSString*)text
            image:(UIImage*)image
         complete:(void(^)())completeBlock
    failWithError:(void(^)(NSError *error))failBlock;
+
+#pragma mark - User
 
 + (void)getUserInfoWithComplete:(void(^)(NSDictionary *userInfo, NSError *error))completeBlock;
 

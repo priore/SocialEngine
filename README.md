@@ -1,12 +1,15 @@
 **SocialEngine**
 ================
 
-With SocialEngine you can simplify retrieving information for a iOS Facebook or Twitter account and simplify the sharing of a message, link or an image, all in quickly and easily.
+With SocialEngine you can simplify retrieving information for a iOS Facebook or Twitter account 
+and simplify the sharing of a message, link or an image, all in quickly and easily.
 
-SocialEngine consists of only two classes, and requires Twitter.framework, Social.framework and Accounts.framework. SocialEngine is for iOS version 5.0 and higher.
+SocialEngine consists of only two classes, and requires Twitter.framework, Social.framework 
+and Accounts.framework. SocialEngine is for iOS version 5.0 and higher.
 
 ## Features
 * Retrieve user informations.
+* Retrieve app informations.
 * Share text, url and image.
 
 ## Requirements
@@ -50,6 +53,16 @@ Below a simple example on Objective-C :
                     }];
     }];
     
+    // facebook app infos
+    [FacebookEngine getAppAccessTokenWithAppId:@"1234567890" cosumerSecret:@"1234567890" 
+    								  complete:^(NSString *token, NSError *error) {
+    								  
+        [FacebookEngine getAppInfoFromToken:token complete:^(NSDictionary *appInfo, NSError *error) {
+            
+            NSLog(@"Facebook App infos : %@", appInfo);
+        }];
+    }];
+    
     // twitter user infos
     [TwitterEngine getUserInfoWithComplete:^(NSDictionary *userInfo, NSError *error) {
         
@@ -79,4 +92,4 @@ Below a simple example on Objective-C :
                     }];
 
 
-**[Facebook Home Page](https://www.facebook.com/prioregroup)**
+**[Facebook Home Page](https://www.facebook.com/prioregroup)**  -  **[Twitter Home Page](https://www.twitter.com/DaniloPriore)**

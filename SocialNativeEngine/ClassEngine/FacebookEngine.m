@@ -33,6 +33,8 @@
 
 @implementation FacebookEngine
 
+#pragma mark - Share
+
 + (void)shareURI:(NSString*)uri
             text:(NSString*)text
            image:(UIImage*)image
@@ -94,6 +96,8 @@
     }
 }
 
+#pragma mark - User
+
 + (void)getUserInfoWithAppID:(NSString*)appID complete:(void(^)(NSDictionary *userInfo, NSError *error))completeBlock
 {
     if (SYSTEM_VERSION_LESS_THAN(@"6.0")) {
@@ -138,5 +142,45 @@
     }
 }
 
+#pragma mark - Application
+
++ (void)getAppAccessTokenWithAppId:(NSString*)appId cosumerSecret:(NSString*)secret complete:(void(^)(NSString *token, NSError *error))completeBlock
+{
+    // get application access token
+    NSString *link = [NSString stringWithFormat:@"https://graph.facebook.com/oauth/access_token?client_id=%@&client_secret=%@&grant_type=client_credentials", appId, secret];
+    NSURL *url = [NSURL URLWithString:link];
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:url] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        
+        if (completeBlock) {
+            if (error) {
+                completeBlock(nil, error);
+            } else {
+                NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                NSString *token = [result stringByReplacingOccurrencesOfString:@"access_token=" withString:@""];
+                completeBlock(token, nil);
+                [result release];
+            }
+        }
+    }];
+}
+
++ (void)getAppInfoFromToken:(NSString*)token complete:(void(^)(NSDictionary *appInfo, NSError *error))completeBlock
+{
+    // get application info
+    NSString *link = [NSString stringWithFormat:@"https://graph.facebook.com/app?access_token=%@", [token stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURL *url = [NSURL URLWithString:link];
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:url] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        
+        if (completeBlock) {
+            if (error) {
+                completeBlock(nil, error);
+            } else {
+                NSError *err = nil;
+                NSDictionary *dict = (NSDictionary*)[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
+                completeBlock(dict, err);
+            }
+        }
+    }];
+}
 
 @end

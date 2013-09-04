@@ -35,6 +35,8 @@
 
 @implementation TwitterEngine
 
+#pragma mark - Share
+
 + (void)shareURI:(NSString*)uri
             text:(NSString*)text
            image:(UIImage*)image
@@ -127,6 +129,8 @@
         }
     }
 }
+
+#pragma mark - User
 
 + (void)getUserInfoWithComplete:(void(^)(NSDictionary *userInfo, NSError *error))completeBlock
 {

@@ -28,8 +28,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    IBOutlet UITextView *appTextView;
+}
 
 - (IBAction)didFacebookButtonSelected:(id)sender;
 - (IBAction)didTwitterButtonSelected:(id)sender;
+- (IBAction)didAppInfosButtonSelected:(id)sender;
 
 @end

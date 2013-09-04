@@ -97,4 +97,17 @@
     }];
 }
 
+- (IBAction)didAppInfosButtonSelected:(id)sender
+{
+    #warning write here your Facebook AppID and Consumer Secret
+    [FacebookEngine getAppAccessTokenWithAppId:@"1234567890" cosumerSecret:@"1234567890" complete:^(NSString *token, NSError *error) {
+        [FacebookEngine getAppInfoFromToken:token complete:^(NSDictionary *appInfo, NSError *error) {
+            
+            appTextView.text = [NSString stringWithFormat:@"%@", appInfo];
+            
+            NSLog(@"Facebook App infos : %@", appInfo);
+        }];
+    }];
+}
+
 @end

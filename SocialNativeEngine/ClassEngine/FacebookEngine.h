@@ -29,12 +29,26 @@
 
 @interface FacebookEngine : NSObject
 
+#pragma mark - Share
+
 + (void)shareURI:(NSString*)uri
             text:(NSString*)text
            image:(UIImage*)image
         complete:(void(^)())completeBlock
    failWithError:(void(^)(NSError *error))failBlock;
 
-+ (void)getUserInfoWithAppID:(NSString*)appID complete:(void(^)(NSDictionary *userInfo, NSError *error))completeBlock;
+#pragma mark - User
+
++ (void)getUserInfoWithAppID:(NSString*)appID
+                    complete:(void(^)(NSDictionary *userInfo, NSError *error))completeBlock;
+
+#pragma mark - Application
+
++ (void)getAppAccessTokenWithAppId:(NSString*)appId
+                     cosumerSecret:(NSString*)secret
+                          complete:(void(^)(NSString *token, NSError *error))completeBlock;
+
++ (void)getAppInfoFromToken:(NSString*)token
+                   complete:(void(^)(NSDictionary *appInfo, NSError *error))completeBlock;
 
 @end
