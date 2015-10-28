@@ -37,10 +37,11 @@ typedef void(^EmailEngineFailWithError)(NSError *error);
 
 + (BOOL)isAvailable;
 
-- (void)shareURI:(NSString*)uri
-            text:(NSString*)text
-           image:(UIImage*)image
-        complete:(EmailEngineCompleteWithResult)completeBlock
-   failWithError:(EmailEngineFailWithError)failBlock;
+- (void)shareTo:(NSArray<NSString*>*)to
+        subject:(NSString*)subject
+           text:(NSString*)text
+          image:(UIImage*)image
+       complete:(EmailEngineCompleteWithResult)completeBlock
+  failWithError:(EmailEngineFailWithError)failBlock;
 
 @end

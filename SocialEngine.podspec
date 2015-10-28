@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name 				= 'SocialEngine'
-  s.version 			= '1.2'
+  s.version 			= '1.3'
   s.summary 			= 'Simplify the sharing of a message, link or an image.'
   s.license 			= { :type => 'Shareware', :file => 'LICENSE' }
   s.authors 			= { 'Danilo Priore' => 'support@prioregroup.com' }
@@ -10,7 +10,6 @@ Pod::Spec.new do |s|
   s.frameworks			= 'Social', 'Twitter', 'MessageUI', 'Accounts'
   s.requires_arc 			= true
   s.source_files			= 'SocialNativeEngine/ClassEngine/*.{h,m}'
-  s.resource				= 'SocialNativeEngine/ClassEngine/*.html'
   s.ios.platform			= '6.0'
   s.ios.deployment_target	= '6.0'
 end

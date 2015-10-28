@@ -45,9 +45,9 @@
         */
         
         UIImage *img = [UIImage imageNamed:@"egyptoname.jpg"];
-        [FacebookEngine shareURI:@"http://www.prioregroup.com"  // you url (uri)
-                            text:@"My site"                     // you default message
-                           image:img                            // you image
+        [FacebookEngine shareURI:@"http://www.prioregroup.com"  // your url (uri)
+                            text:@"My site"                     // your default message
+                           image:img                            // your image
                         complete:^{
                             NSLog(@"Facebook message shared.");
                             //
@@ -76,9 +76,9 @@
         */
         
         UIImage *img = [UIImage imageNamed:@"egyptoname.jpg"];
-        [TwitterEngine shareURI:@"http://www.prioregroup.com"   // you url (uri)
-                           text:@"@danilopriore "               // you default message
-                          image:img                             // you image
+        [TwitterEngine shareURI:@"http://www.prioregroup.com"   // your url (uri)
+                           text:@"@danilopriore "               // your default message
+                          image:img                             // your image
                        complete:^{
                            NSLog(@"Twitter message shared.");
                            //
@@ -97,20 +97,21 @@
 {
     // email share
     UIImage *img = [UIImage imageNamed:@"egyptoname.jpg"];
-    [[EmailEngine sharedInstance] shareURI:@"http://www.prioregroup.com"   // you url (uri)
-                                      text:@"@danilopriore"                // you default message
-                                     image:img                             // you image
-                                  complete:^(MFMailComposeResult result) {
-                                      NSLog(@"Email message sended.");
-                                      //
-                                      // TODO: your code here when sharing is completed
-                                      //
-                                  } failWithError:^(NSError *error) {
-                                      NSLog(@"Email message not sended!");
-                                      //
-                                      // TODO: your code here were not shared or canceled
-                                      //
-                                  }];
+    [[EmailEngine sharedInstance] shareTo:@[@"email@server.com"]           // your default message
+                                  subject:@"My Twitter"                    // email subject
+                                     text:@"@danilopriore"                 // text
+                                    image:img                              // your image
+                                 complete:^(MFMailComposeResult result) {
+                                     NSLog(@"Email message sended.");
+                                     //
+                                     // TODO: your code here when sharing is completed
+                                     //
+                                 } failWithError:^(NSError *error) {
+                                     NSLog(@"Email message not sended!");
+                                     //
+                                     // TODO: your code here were not shared or canceled
+                                     //
+                                 }];
 }
 
 - (IBAction)didAppInfosButtonSelected:(id)sender

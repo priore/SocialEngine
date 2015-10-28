@@ -10,7 +10,6 @@
 		9F4F9FAE1BE10989000DEB6B /* EmailEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F9FAD1BE10989000DEB6B /* EmailEngine.m */; };
 		9F4F9FB01BE1099B000DEB6B /* SocialEngine.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9F4F9FAF1BE1099B000DEB6B /* SocialEngine.podspec */; };
 		9F4F9FB21BE10DF6000DEB6B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4F9FB11BE10DF6000DEB6B /* MessageUI.framework */; };
-		9F4F9FB41BE10F9D000DEB6B /* EmailTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 9F4F9FB31BE10F9D000DEB6B /* EmailTemplate.html */; };
 		9FACEF0217CE57A500722654 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF0117CE57A500722654 /* UIKit.framework */; };
 		9FACEF0417CE57A500722654 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF0317CE57A500722654 /* Foundation.framework */; };
 		9FACEF0617CE57A500722654 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF0517CE57A500722654 /* CoreGraphics.framework */; };
@@ -34,7 +33,6 @@
 		9F4F9FAD1BE10989000DEB6B /* EmailEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailEngine.m; sourceTree = "<group>"; };
 		9F4F9FAF1BE1099B000DEB6B /* SocialEngine.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SocialEngine.podspec; sourceTree = "<group>"; };
 		9F4F9FB11BE10DF6000DEB6B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
-		9F4F9FB31BE10F9D000DEB6B /* EmailTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EmailTemplate.html; sourceTree = "<group>"; };
 		9FACEEFE17CE57A500722654 /* SocialNativeEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNativeEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FACEF0117CE57A500722654 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9FACEF0317CE57A500722654 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -154,7 +152,6 @@
 				9FACEF2B17CE57EF00722654 /* TwitterEngine.m */,
 				9F4F9FAC1BE10989000DEB6B /* EmailEngine.h */,
 				9F4F9FAD1BE10989000DEB6B /* EmailEngine.m */,
-				9F4F9FB31BE10F9D000DEB6B /* EmailTemplate.html */,
 			);
 			path = ClassEngine;
 			sourceTree = "<group>";
@@ -211,7 +208,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FACEF0C17CE57A500722654 /* InfoPlist.strings in Resources */,
-				9F4F9FB41BE10F9D000DEB6B /* EmailTemplate.html in Resources */,
 				9FACEF1417CE57A500722654 /* Default.png in Resources */,
 				9FACEF1617CE57A500722654 /* Default@2x.png in Resources */,
 				9FACEF1817CE57A500722654 /* Default-568h@2x.png in Resources */,

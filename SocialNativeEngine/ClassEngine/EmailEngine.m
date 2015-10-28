@@ -57,8 +57,7 @@
     return [MFMailComposeViewController canSendMail];
 }
 
-- (void)shareURI:(NSString*)uri text:(NSString*)text image:(UIImage*)image complete:(EmailEngineCompleteWithResult)completeBlock failWithError:(EmailEngineFailWithError)failBlock;
-
+- (void)shareTo:(NSArray<NSString*>*)to subject:(NSString*)subject text:(NSString*)text image:(UIImage*)image complete:(EmailEngineCompleteWithResult)completeBlock failWithError:(EmailEngineFailWithError)failBlock
 {
     UIViewController *root = [[UIApplication sharedApplication] keyWindow].rootViewController;
 
@@ -67,16 +66,7 @@
         self.complete_block = [completeBlock copy];
         self.fail_block = [failBlock copy];
         
-        // current app name
-        NSString *appName = [[[NSBundle mainBundle] localizedInfoDictionary] objectForKey:@"CFBundleDisplayName"];
-        if (appName == nil) {
-            appName = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleDisplayName"];
-        }
-        
-        // compose html email message
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"EmailTemplate" ofType:@"html"];
-        NSString *htmlBody = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
-        NSString *html = [NSString stringWithFormat:htmlBody, uri, appName, text];
+        // compose email message
         MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
         
         if (image) {
@@ -85,8 +75,9 @@
                                          fileName:@"image.jpeg"];
         }
         
-        [mailViewController setSubject:appName];
-        [mailViewController setMessageBody:html isHTML:YES];
+        [mailViewController setToRecipients:to];
+        [mailViewController setSubject:subject];
+        [mailViewController setMessageBody:text isHTML:[text containsString:@"<html>"]];
         [mailViewController setMailComposeDelegate:self];
         [root presentViewController:mailViewController animated:YES completion:nil];
     } else {
