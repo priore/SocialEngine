@@ -1,8 +1,8 @@
 //
-//  SocialEngine.h
+//  EmailEngine.h
 //  SocialNativeEngine
 //
-//  Created by danilo on 28/08/13.
+//  Created by Danilo Priore on 11/07/13.
 //  Copyright (c) 2013 Danilo Priore. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,12 +24,23 @@
 //  THE SOFTWARE.
 //
 //
-// Requirements:
-//
-// Twitter.framework
-// Social.framework
-// Accounts.framework
 
-#include "FacebookEngine.h"
-#include "TwitterEngine.h"
-#include "EmailEngine.h"
+#import <Foundation/Foundation.h>
+#import <MessageUI/MFMailComposeViewController.h>
+
+typedef void(^EmailEngineCompleteWithResult)(MFMailComposeResult result);
+typedef void(^EmailEngineFailWithError)(NSError *error);
+
+@interface EmailEngine : NSObject <MFMailComposeViewControllerDelegate>
+
++ (EmailEngine*)sharedInstance;
+
++ (BOOL)isAvailable;
+
+- (void)shareURI:(NSString*)uri
+            text:(NSString*)text
+           image:(UIImage*)image
+        complete:(EmailEngineCompleteWithResult)completeBlock
+   failWithError:(EmailEngineFailWithError)failBlock;
+
+@end

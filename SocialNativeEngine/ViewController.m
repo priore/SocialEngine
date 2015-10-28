@@ -32,14 +32,10 @@
 
 - (IBAction)didFacebookButtonSelected:(id)sender
 {
-    #warning write here your Facebook AppID
-    [FacebookEngine getUserInfoWithAppID:@"1234567890" complete:^(NSDictionary *userInfo, NSError *error) {
+    #warning write here your Facebook AppID!!!
+    [FacebookEngine getUserInfoWithAppID:@"119725861414676" complete:^(NSDictionary *userInfo, NSError *error) {
         
-        if (userInfo == nil) {
-            NSLog(@"Invalid Facebook AppID!");
-        } else {
-            NSLog(@"Facebook User infos : %@", userInfo);
-        }
+        NSLog(@"Facebook User infos : %@\nError: %@", userInfo, error);
         
         /*
         // load profile image
@@ -70,7 +66,7 @@
 {
     [TwitterEngine getUserInfoWithComplete:^(NSDictionary *userInfo, NSError *error) {
         
-        NSLog(@"Twitter User infos : %@", userInfo);
+        NSLog(@"Twitter User infos : %@\nError: %@", userInfo, error);
 
         /*
         // load profile image
@@ -97,16 +93,41 @@
     }];
 }
 
+- (IBAction)didEmailButtonSelected:(id)sender
+{
+    // email share
+    UIImage *img = [UIImage imageNamed:@"egyptoname.jpg"];
+    [[EmailEngine sharedInstance] shareURI:@"http://www.prioregroup.com"   // you url (uri)
+                                      text:@"@danilopriore"                // you default message
+                                     image:img                             // you image
+                                  complete:^(MFMailComposeResult result) {
+                                      NSLog(@"Email message sended.");
+                                      //
+                                      // TODO: your code here when sharing is completed
+                                      //
+                                  } failWithError:^(NSError *error) {
+                                      NSLog(@"Email message not sended!");
+                                      //
+                                      // TODO: your code here were not shared or canceled
+                                      //
+                                  }];
+}
+
 - (IBAction)didAppInfosButtonSelected:(id)sender
 {
-    #warning write here your Facebook AppID and Consumer Secret
-    [FacebookEngine getAppAccessTokenWithAppId:@"1234567890" cosumerSecret:@"1234567890" complete:^(NSString *token, NSError *error) {
-        [FacebookEngine getAppInfoFromToken:token complete:^(NSDictionary *appInfo, NSError *error) {
-            
-            appTextView.text = [NSString stringWithFormat:@"%@", appInfo];
-            
-            NSLog(@"Facebook App infos : %@", appInfo);
-        }];
+    #warning write here your Facebook AppID and Consumer Secret!!!
+    [FacebookEngine getAppAccessTokenWithAppId:@"119725861414676" cosumerSecret:@"aaaaaaaaaaaaaaaaaaa" complete:^(NSString *token, NSError *error) {
+        
+        NSLog(@"Token: %@, Error: %@", token, error);
+        
+        if (!error) {
+            [FacebookEngine getAppInfoFromToken:token complete:^(NSDictionary *appInfo, NSError *error) {
+                
+                appTextView.text = [NSString stringWithFormat:@"%@", appInfo];
+                
+                NSLog(@"Facebook App infos : %@", appInfo);
+            }];
+        }
     }];
 }
 

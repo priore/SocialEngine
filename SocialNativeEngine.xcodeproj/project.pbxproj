@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F4F9FAE1BE10989000DEB6B /* EmailEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4F9FAD1BE10989000DEB6B /* EmailEngine.m */; };
+		9F4F9FB01BE1099B000DEB6B /* SocialEngine.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9F4F9FAF1BE1099B000DEB6B /* SocialEngine.podspec */; };
+		9F4F9FB21BE10DF6000DEB6B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F4F9FB11BE10DF6000DEB6B /* MessageUI.framework */; };
+		9F4F9FB41BE10F9D000DEB6B /* EmailTemplate.html in Resources */ = {isa = PBXBuildFile; fileRef = 9F4F9FB31BE10F9D000DEB6B /* EmailTemplate.html */; };
 		9FACEF0217CE57A500722654 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF0117CE57A500722654 /* UIKit.framework */; };
 		9FACEF0417CE57A500722654 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF0317CE57A500722654 /* Foundation.framework */; };
 		9FACEF0617CE57A500722654 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF0517CE57A500722654 /* CoreGraphics.framework */; };
@@ -23,13 +27,14 @@
 		9FACEF3217CE5B0700722654 /* egyptoname.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF3117CE5B0700722654 /* egyptoname.jpg */; };
 		9FACEF3417CE5BE300722654 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF3317CE5BE300722654 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9FACEF3617CE5BE700722654 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF3517CE5BE700722654 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		9FACEF3817CE5BEB00722654 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FACEF3717CE5BEB00722654 /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		9FACEF3A17CE5ED200722654 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF3917CE5ED200722654 /* Default.png */; };
-		9FACEF3C17CE5EE600722654 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF3B17CE5EE600722654 /* Default@2x.png */; };
-		9FACEF3E17CE5F0100722654 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9FACEF3D17CE5F0100722654 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F4F9FAC1BE10989000DEB6B /* EmailEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailEngine.h; sourceTree = "<group>"; };
+		9F4F9FAD1BE10989000DEB6B /* EmailEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailEngine.m; sourceTree = "<group>"; };
+		9F4F9FAF1BE1099B000DEB6B /* SocialEngine.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SocialEngine.podspec; sourceTree = "<group>"; };
+		9F4F9FB11BE10DF6000DEB6B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		9F4F9FB31BE10F9D000DEB6B /* EmailTemplate.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EmailTemplate.html; sourceTree = "<group>"; };
 		9FACEEFE17CE57A500722654 /* SocialNativeEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNativeEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FACEF0117CE57A500722654 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9FACEF0317CE57A500722654 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,7 +59,6 @@
 		9FACEF3117CE5B0700722654 /* egyptoname.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = egyptoname.jpg; sourceTree = "<group>"; };
 		9FACEF3317CE5BE300722654 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9FACEF3517CE5BE700722654 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		9FACEF3717CE5BEB00722654 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		9FACEF3917CE5ED200722654 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = SocialNativeEngine/Default.png; sourceTree = "<group>"; };
 		9FACEF3B17CE5EE600722654 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "SocialNativeEngine/Default@2x.png"; sourceTree = "<group>"; };
 		9FACEF3D17CE5F0100722654 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "SocialNativeEngine/Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -65,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FACEF3817CE5BEB00722654 /* Twitter.framework in Frameworks */,
+				9F4F9FB21BE10DF6000DEB6B /* MessageUI.framework in Frameworks */,
 				9FACEF3617CE5BE700722654 /* Social.framework in Frameworks */,
 				9FACEF3417CE5BE300722654 /* Accounts.framework in Frameworks */,
 				9FACEF0217CE57A500722654 /* UIKit.framework in Frameworks */,
@@ -80,12 +84,10 @@
 		9FACEEF517CE57A500722654 = {
 			isa = PBXGroup;
 			children = (
+				9F4F9FAF1BE1099B000DEB6B /* SocialEngine.podspec */,
 				9FACEF3917CE5ED200722654 /* Default.png */,
 				9FACEF3B17CE5EE600722654 /* Default@2x.png */,
 				9FACEF3D17CE5F0100722654 /* Default-568h@2x.png */,
-				9FACEF3717CE5BEB00722654 /* Twitter.framework */,
-				9FACEF3517CE5BE700722654 /* Social.framework */,
-				9FACEF3317CE5BE300722654 /* Accounts.framework */,
 				9FACEF0717CE57A500722654 /* SocialNativeEngine */,
 				9FACEF0017CE57A500722654 /* Frameworks */,
 				9FACEEFF17CE57A500722654 /* Products */,
@@ -103,6 +105,9 @@
 		9FACEF0017CE57A500722654 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FACEF3517CE5BE700722654 /* Social.framework */,
+				9FACEF3317CE5BE300722654 /* Accounts.framework */,
+				9F4F9FB11BE10DF6000DEB6B /* MessageUI.framework */,
 				9FACEF0117CE57A500722654 /* UIKit.framework */,
 				9FACEF0317CE57A500722654 /* Foundation.framework */,
 				9FACEF0517CE57A500722654 /* CoreGraphics.framework */,
@@ -147,6 +152,9 @@
 				9FACEF2917CE57EF00722654 /* FacebookEngine.m */,
 				9FACEF2A17CE57EF00722654 /* TwitterEngine.h */,
 				9FACEF2B17CE57EF00722654 /* TwitterEngine.m */,
+				9F4F9FAC1BE10989000DEB6B /* EmailEngine.h */,
+				9F4F9FAD1BE10989000DEB6B /* EmailEngine.m */,
+				9F4F9FB31BE10F9D000DEB6B /* EmailTemplate.html */,
 			);
 			path = ClassEngine;
 			sourceTree = "<group>";
@@ -177,7 +185,7 @@
 		9FACEEF617CE57A500722654 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Danilo Priore";
 			};
 			buildConfigurationList = 9FACEEF917CE57A500722654 /* Build configuration list for PBXProject "SocialNativeEngine" */;
@@ -203,14 +211,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FACEF0C17CE57A500722654 /* InfoPlist.strings in Resources */,
+				9F4F9FB41BE10F9D000DEB6B /* EmailTemplate.html in Resources */,
 				9FACEF1417CE57A500722654 /* Default.png in Resources */,
 				9FACEF1617CE57A500722654 /* Default@2x.png in Resources */,
 				9FACEF1817CE57A500722654 /* Default-568h@2x.png in Resources */,
 				9FACEF1E17CE57A500722654 /* ViewController.xib in Resources */,
 				9FACEF3217CE5B0700722654 /* egyptoname.jpg in Resources */,
-				9FACEF3A17CE5ED200722654 /* Default.png in Resources */,
-				9FACEF3C17CE5EE600722654 /* Default@2x.png in Resources */,
-				9FACEF3E17CE5F0100722654 /* Default-568h@2x.png in Resources */,
+				9F4F9FB01BE1099B000DEB6B /* SocialEngine.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +230,7 @@
 			files = (
 				9FACEF0E17CE57A500722654 /* main.m in Sources */,
 				9FACEF1217CE57A500722654 /* AppDelegate.m in Sources */,
+				9F4F9FAE1BE10989000DEB6B /* EmailEngine.m in Sources */,
 				9FACEF1B17CE57A500722654 /* ViewController.m in Sources */,
 				9FACEF2C17CE57EF00722654 /* FacebookEngine.m in Sources */,
 				9FACEF2D17CE57EF00722654 /* TwitterEngine.m in Sources */,
@@ -264,6 +272,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -310,10 +319,12 @@
 		9FACEF2517CE57A500722654 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialNativeEngine/SocialNativeEngine-Prefix.pch";
 				INFOPLIST_FILE = "SocialNativeEngine/SocialNativeEngine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prioregroup.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -323,10 +334,12 @@
 		9FACEF2617CE57A500722654 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SocialNativeEngine/SocialNativeEngine-Prefix.pch";
 				INFOPLIST_FILE = "SocialNativeEngine/SocialNativeEngine-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.prioregroup.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -352,6 +365,7 @@
 				9FACEF2617CE57A500722654 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -5,7 +5,7 @@ With SocialEngine you can simplify retrieving information for a iOS Facebook or 
 and simplify the sharing of a message, link or an image, all in quickly and easily.
 
 SocialEngine consists of only two classes, and requires Twitter.framework, Social.framework 
-and Accounts.framework. SocialEngine is for iOS version 5.0 and higher.
+and Accounts.framework, MessageUI.framework. SocialEngine is for iOS version 6.0 and higher.
 
 ## Features
 * Retrieve user informations.
@@ -13,14 +13,16 @@ and Accounts.framework. SocialEngine is for iOS version 5.0 and higher.
 * Share text, url and image.
 
 ## Requirements
-* iOS 5.x and higher.
-* XCode 4.5 or later
-* Social.framework (iOS6)
-* Twitter.framework (iOS5)
-* Accounts.framework (both)
+* iOS 6.x and higher.
+* XCode 6.0 or later
+* Social.framework
+* Twitter.framework
+* Accounts.framework
+* MessageUI.framework
 
 Below a simple example on Objective-C :
 
+```objective-c
 	#import "SocialEngine.h"
 
 	// facebook user infos
@@ -91,5 +93,18 @@ Below a simple example on Objective-C :
                         // TODO: your code here were not shared or canceled
                     }];
 
+    // email share
+    UIImage *img = [UIImage imageNamed:@"my-image.jpg"];
+    [[EmailEngine sharedInstance] shareURI:@"http://www.my-domain.com"  // you url (uri)
+                                      text:@"My site"                	// you default message
+                                     image:img                          // you image
+                                  complete:^(MFMailComposeResult result) {
+                                      NSLog(@"Email message sended.");
+                                      // TODO: your code here when sharing is completed
+                                  } failWithError:^(NSError *error) {
+                                      NSLog(@"Email message not sended!");
+                                      // TODO: your code here were not shared or canceled
+                                  }];
+```
 
 **[Facebook Home Page](https://www.facebook.com/prioregroup)**  -  **[Twitter Home Page](https://www.twitter.com/DaniloPriore)**

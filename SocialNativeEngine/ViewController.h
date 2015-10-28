@@ -34,6 +34,7 @@
 
 - (IBAction)didFacebookButtonSelected:(id)sender;
 - (IBAction)didTwitterButtonSelected:(id)sender;
+- (IBAction)didEmailButtonSelected:(id)sender;
 - (IBAction)didAppInfosButtonSelected:(id)sender;
 
 @end
