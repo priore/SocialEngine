@@ -16,13 +16,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8">
                     <rect key="frame" x="60" y="62" width="200" height="30"/>
                     <animations/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="B0O-VB-u2c"/>
-                        <constraint firstAttribute="width" constant="200" id="tbH-8t-rKX"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Facebook">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,28 +27,9 @@
                         <action selector="didFacebookButtonSelected:" destination="-1" eventType="touchUpInside" id="32"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1c-tD-hju">
-                    <rect key="frame" x="60" y="183" width="200" height="30"/>
-                    <animations/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="200" id="dKQ-i8-M50"/>
-                        <constraint firstAttribute="height" constant="30" id="hcq-Bt-Xng"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <state key="normal" title="Email">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="didEmailButtonSelected:" destination="-1" eventType="touchUpInside" id="0s4-9m-TPI"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44">
                     <rect key="frame" x="174" y="402" width="126" height="30"/>
                     <animations/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="126" id="IhY-7L-kx7"/>
-                        <constraint firstAttribute="height" constant="30" id="Nxv-tb-sSF"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="App Info's">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,23 +38,16 @@
                         <action selector="didAppInfosButtonSelected:" destination="-1" eventType="touchUpInside" id="51"/>
                     </connections>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="53">
                     <rect key="frame" x="20" y="243" width="280" height="151"/>
                     <animations/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="151" id="hJM-pz-nhc"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11">
-                    <rect key="frame" x="60" y="122" width="200" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                    <rect key="frame" x="60" y="100" width="200" height="30"/>
                     <animations/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="IaC-QY-zaS"/>
-                        <constraint firstAttribute="width" constant="200" id="JFp-Rl-HtQ"/>
-                    </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="Twitter">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,22 +56,31 @@
                         <action selector="didTwitterButtonSelected:" destination="-1" eventType="touchUpInside" id="33"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYh-Ne-Fpg">
+                    <rect key="frame" x="60" y="138" width="200" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="SinaWeibo">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didSinaWeiboButtonSelected:" destination="-1" eventType="touchUpInside" id="EaR-ri-K9g"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1c-tD-hju">
+                    <rect key="frame" x="60" y="176" width="200" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Email">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didEmailButtonSelected:" destination="-1" eventType="touchUpInside" id="0s4-9m-TPI"/>
+                    </connections>
+                </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="11" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="8dg-Bg-Lbh"/>
-                <constraint firstItem="8" firstAttribute="top" secondItem="6" secondAttribute="top" constant="62" id="Bcp-Cj-wo5"/>
-                <constraint firstItem="44" firstAttribute="top" secondItem="53" secondAttribute="bottom" constant="8" id="Hfr-YA-oYe"/>
-                <constraint firstItem="53" firstAttribute="top" secondItem="V1c-tD-hju" secondAttribute="bottom" constant="30" id="T2i-wV-z93"/>
-                <constraint firstItem="8" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="WPv-cz-Xln"/>
-                <constraint firstItem="V1c-tD-hju" firstAttribute="top" secondItem="11" secondAttribute="bottom" constant="31" id="abK-Ts-6hJ"/>
-                <constraint firstItem="53" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="20" id="dQb-9B-Rkn"/>
-                <constraint firstAttribute="trailing" secondItem="44" secondAttribute="trailing" constant="20" id="rtT-Kb-b1h"/>
-                <constraint firstItem="V1c-tD-hju" firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="yYw-wM-OB9"/>
-                <constraint firstItem="11" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="30" id="zgw-rB-TCL"/>
-                <constraint firstAttribute="trailing" secondItem="53" secondAttribute="trailing" constant="20" id="zqk-OR-EpD"/>
-            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>

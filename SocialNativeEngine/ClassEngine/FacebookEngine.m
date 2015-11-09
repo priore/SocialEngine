@@ -85,6 +85,9 @@
         dispatch_sync(dispatch_get_main_queue(), ^{
             [root presentViewController:controller animated:YES completion:nil];
         });
+    } else if (failBlock) {
+        NSError *err = [NSError errorWithDomain:@"SocialEngine" code:-1001 userInfo:@{ NSLocalizedDescriptionKey: @"Facebook not available!"}];
+        failBlock(err);
     }
 }
 

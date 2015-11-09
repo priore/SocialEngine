@@ -55,6 +55,7 @@
                             //
                         } failWithError:^(NSError *error) {
                             NSLog(@"Facebook message not shared!");
+                            NSLog(@"%@", error);
                             //
                             // TODO: your code here were not shared or canceled
                             //
@@ -86,11 +87,32 @@
                            //
                        } failWithError:^(NSError *error) {
                            NSLog(@"Twitter message not shared!");
+                           NSLog(@"%@", error);
                            //
                            // TODO: your code here were not shared or canceled
                            //
                        }];
     }];
+}
+
+- (IBAction)didSinaWeiboButtonSelected:(id)sender
+{
+    UIImage *img = [UIImage imageNamed:@"egyptponame.jpg"];
+    [WeiboEngine shareURI:@"http://www.prioregroup.com"
+                     text:@"Prioregroup.com"
+                    image:img
+                 complete:^{
+                     NSLog(@"Weibo message shared.");
+                     //
+                     // TODO: your code here when sharing is completed
+                     //
+                 } failWithError:^(NSError *error) {
+                     NSLog(@"Weibo message not shared!");
+                     NSLog(@"%@", error);
+                     //
+                     // TODO: your code here were not shared or canceled
+                     //
+                 }];
 }
 
 - (IBAction)didEmailButtonSelected:(id)sender

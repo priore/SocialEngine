@@ -1,9 +1,9 @@
 //
-//  SocialEngine.h
+//  WeiboEngine.h
 //  SocialNativeEngine
 //
-//  Created by danilo on 28/08/13.
-//  Copyright (c) 2013 Danilo Priore. All rights reserved.
+//  Created by Danilo Priore on 09/11/15.
+//  Copyright (c) 2015 Danilo Priore. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,13 +24,17 @@
 //  THE SOFTWARE.
 //
 //
-// Requirements:
-//
-// Twitter.framework
-// Social.framework
-// Accounts.framework
 
-#include "FacebookEngine.h"
-#include "TwitterEngine.h"
-#include "WeiboEngine.h"
-#include "EmailEngine.h"
+#import <Foundation/Foundation.h>
+
+@interface WeiboEngine : NSObject
+
+#pragma mark - Share
+
++ (void)shareURI:(NSString*)uri
+            text:(NSString*)text
+           image:(UIImage*)image
+        complete:(void(^)())completeBlock
+   failWithError:(void(^)(NSError *error))failBlock;
+
+@end

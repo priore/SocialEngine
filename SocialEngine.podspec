@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
   s.name 				= 'SocialEngine'
-  s.version 			= '1.3'
+  s.version 			= '1.4'
   s.summary 			= 'Simplify the sharing of a message, link or an image.'
   s.license 			= { :type => 'Shareware', :file => 'LICENSE' }
   s.authors 			= { 'Danilo Priore' => 'support@prioregroup.com' }
   s.homepage 			= 'https://github.com/priore/SocialEngine'
   s.social_media_url 	= 'https://twitter.com/danilopriore'
   s.source 				= { git: 'https://github.com/priore/SocialEngine.git', :tag => "v#{s.version}" }
-  s.frameworks			= 'Social', 'Twitter', 'MessageUI', 'Accounts'
+  s.frameworks			= 'Social', 'MessageUI', 'Accounts'
   s.requires_arc 			= true
   s.source_files			= 'SocialNativeEngine/ClassEngine/*.{h,m}'
   s.ios.platform			= '6.0'
