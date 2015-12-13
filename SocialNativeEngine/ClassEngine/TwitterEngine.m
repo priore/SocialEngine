@@ -43,10 +43,6 @@
         complete:(void(^)())completeBlock
    failWithError:(void(^)(NSError *error))failBlock
 {
-    UIViewController *root = [[UIApplication sharedApplication] keyWindow].rootViewController;
-    
-    // iOS 6.x
-    
     SLComposeViewController *controller = nil;
     if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
         controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
@@ -84,9 +80,10 @@
         [controller addURL:[NSURL URLWithString:uri]];
         [controller setCompletionHandler:completionHandler];
         
-        dispatch_sync(dispatch_get_main_queue(), ^{
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            UIViewController *root = [[UIApplication sharedApplication] keyWindow].rootViewController;
             [root presentViewController:controller animated:YES completion:nil];
-        });
+        }];
     } else if (failBlock) {
         NSError *err = [NSError errorWithDomain:@"SocialEngine" code:-1001 userInfo:@{ NSLocalizedDescriptionKey: @"Twitter not available!"}];
         failBlock(err);

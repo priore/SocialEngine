@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name 				= 'SocialEngine'
-  s.version 			= '1.4'
+  s.version 			= '1.4.1'
   s.summary 			= 'Simplify the sharing of a message, link or an image.'
   s.license 			= { :type => 'Shareware', :file => 'LICENSE' }
   s.authors 			= { 'Danilo Priore' => 'support@prioregroup.com' }

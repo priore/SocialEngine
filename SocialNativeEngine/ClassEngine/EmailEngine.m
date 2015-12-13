@@ -59,8 +59,6 @@
 
 - (void)shareTo:(NSArray<NSString*>*)to subject:(NSString*)subject text:(NSString*)text image:(UIImage*)image complete:(EmailEngineCompleteWithResult)completeBlock failWithError:(EmailEngineFailWithError)failBlock
 {
-    UIViewController *root = [[UIApplication sharedApplication] keyWindow].rootViewController;
-
     if ([MFMailComposeViewController canSendMail]) {
         
         self.complete_block = [completeBlock copy];
@@ -79,7 +77,12 @@
         [mailViewController setSubject:subject];
         [mailViewController setMessageBody:text isHTML:[text containsString:@"<html>"]];
         [mailViewController setMailComposeDelegate:self];
-        [root presentViewController:mailViewController animated:YES completion:nil];
+        
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            UIViewController *root = [[UIApplication sharedApplication] keyWindow].rootViewController;
+            [root presentViewController:mailViewController animated:YES completion:nil];
+        }];
+        
     } else {
         EMLog(@"Cancelled.....");
         
