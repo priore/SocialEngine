@@ -14,7 +14,7 @@ and Accounts.framework, MessageUI.framework. SocialEngine is for iOS version 6.0
 
 ## Requirements
 * iOS 6.x and higher.
-* XCode 6.0 or later
+* Xcode 6.0 or later
 * Social.framework
 * Twitter.framework
 * Accounts.framework
